@@ -1,0 +1,11 @@
+[Unit]
+Description=Rserve Binary R server
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/usr/lib64/R/bin/Rserve --no-save
+Environment=R_HOME=/usr/lib64/R
+
+[Install]
+WantedBy=multi-user.target
